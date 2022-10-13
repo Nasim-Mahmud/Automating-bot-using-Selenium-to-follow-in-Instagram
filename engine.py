@@ -9,3 +9,9 @@ class Sel:
         self.s = Service(self.chrome_drive_path)
         self.driver = webdriver.Chrome(service=self.s)
         self.driver.get(link)
+
+    def find(self, item):
+        self.driver.find_element(By.XPATH, f"{item}")
+
+    def Quit(self):
+        self.driver.quit()

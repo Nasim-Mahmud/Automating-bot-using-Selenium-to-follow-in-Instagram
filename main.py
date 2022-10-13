@@ -4,3 +4,6 @@ LINK = "https://www.instagram.com/"
 obj = Sel(LINK)
 
 
+
+
+# obj.Quit()
