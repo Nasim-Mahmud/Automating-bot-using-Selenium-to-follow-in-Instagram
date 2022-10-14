@@ -32,9 +32,10 @@ sleep(10)
 
 search = driver.find_element(By.XPATH, '//input[@placeholder="Search"]')
 search.send_keys("cookingchannel")
+sleep(2)
+search.send_keys(Keys.ARROW_DOWN)
+sleep(2)
 search.send_keys(Keys.ENTER)
-sleep(4)
-
 
 
 # driver.quit()
