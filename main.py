@@ -21,7 +21,7 @@ username = driver.find_element(By.NAME, "username")
 username.send_keys(id)
 sleep(1)
 
-passw = driver.find_element(By.NAME, "input password")
+passw = driver.find_element(By.NAME, "password")
 passw.send_keys(password)
 sleep(1)
 
