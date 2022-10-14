@@ -1,4 +1,5 @@
 import os
+from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -10,9 +11,19 @@ password = os.environ["PASS"]
 chrome_drive_path = "C:\Development\chromedriver.exe"
 s = Service(chrome_drive_path)
 driver = webdriver.Chrome(service=s)
-driver.get()
+driver.get(LINK)
+# To prevent acting like a bot, we need to delay loading time so that Instagram don't block us from logging.
+# Trust me, I checked!
+sleep(4)
 
-item = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input')
-item.send_keys("00")
+
+username = driver.find_element(By.NAME, "username")
+username.send_keys(id)
+sleep(1)
+
+passw = driver.find_element(By.NAME, "input password")
+passw.send_keys(password)
+sleep(1)
+
 
 # driver.quit()
