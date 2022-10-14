@@ -17,7 +17,7 @@ driver.get(LINK)
 # Trust me, I checked!
 sleep(4)
 
-
+# Logging into account
 username = driver.find_element(By.NAME, "username")
 username.send_keys(id)
 sleep(1)
@@ -30,12 +30,12 @@ submit = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]/button/d
 submit.click()
 sleep(10)
 
+# Searching for the designated page
 search = driver.find_element(By.XPATH, '//input[@placeholder="Search"]')
 search.send_keys("cookingchannel")
 sleep(2)
 search.send_keys(Keys.ARROW_DOWN)
 sleep(2)
 search.send_keys(Keys.ENTER)
-
 
 # driver.quit()
