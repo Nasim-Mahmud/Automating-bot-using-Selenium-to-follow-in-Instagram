@@ -37,5 +37,9 @@ sleep(2)
 search.send_keys(Keys.ARROW_DOWN)
 sleep(2)
 search.send_keys(Keys.ENTER)
+sleep(10)
+
+followers = driver.find_element(By.CSS_SELECTOR, "li a href")
+# followers.click()
 
 # driver.quit()
