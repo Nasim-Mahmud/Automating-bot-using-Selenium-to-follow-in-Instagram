@@ -1,10 +1,11 @@
 import os
+from follow import Follow
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
-from selenium.common.exceptions import ElementClickInterceptedException
+
 
 LINK = "https://www.instagram.com/"
 id = os.environ["ID"]
@@ -46,13 +47,7 @@ followers.click()
 sleep(4)
 
 # Clicking follow button
-follow_buttons = driver.find_elements(By.CSS_SELECTOR, "._aano button")
-for button in follow_buttons:
-    try:
-        button.click()
-        sleep(2)
-    except ElementClickInterceptedException:
-        cancel = driver.find_element(By.CSS_SELECTOR, ".x5fp0pe ._a9-z ._a9_1")
-        cancel.click()
+gg = Follow()
+gg.follow()
 
 # driver.quit()
