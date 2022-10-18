@@ -31,7 +31,6 @@ submit = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]/button/d
 submit.click()
 sleep(10)
 
-
 # Searching for the designated page
 search = driver.find_element(By.XPATH, '//input[@placeholder="Search"]')
 search.send_keys("cookingchannel")
