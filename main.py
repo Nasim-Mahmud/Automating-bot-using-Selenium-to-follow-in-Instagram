@@ -39,7 +39,6 @@ search.send_keys(Keys.ARROW_DOWN)
 sleep(2)
 search.send_keys(Keys.ENTER)
 sleep(7)
-
 # Following the followers of the page.
 followers = driver.find_element(By.CSS_SELECTOR, ".xieb3on li a")
 followers.click()
