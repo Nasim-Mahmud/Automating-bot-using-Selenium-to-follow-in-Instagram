@@ -45,6 +45,7 @@ followers = driver.find_element(By.CSS_SELECTOR, ".xieb3on li a")
 followers.click()
 sleep(4)
 
+
 # Clicking follow button
 follow_buttons = driver.find_elements(By.CSS_SELECTOR, "._aano button")
 for button in follow_buttons:
