@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import ElementClickInterceptedException
 
+
 LINK = "https://www.instagram.com/"
 id = os.environ["ID"]
 password = os.environ["PASS"]
